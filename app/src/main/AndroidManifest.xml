@@ -14,10 +14,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MenuActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".ViagemActivity">
-
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ViagemActivity"></activity>
         <activity android:name=".GastoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

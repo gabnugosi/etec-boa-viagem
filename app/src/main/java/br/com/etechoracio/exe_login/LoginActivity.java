@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.com.etechoracio.boaviagem.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editUsuario;

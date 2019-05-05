@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.etechoracio.boaviagem.ViagemActivity">
-
+    tools:context=".ViagemActivity"
+    android:id="@+id/activity_viagem">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,14 +15,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/azul"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/azul">
 
             <TextView
                 style="@style/titulo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/novaViagem" />
+                android:text="@string/novaViagem"/>
 
         </LinearLayout>
 
@@ -31,7 +29,7 @@
             android:layout_height="wrap_content"
             android:stretchColumns="0,1">
 
-            <TextView android:text="@string/destino" />
+            <TextView android:text="@string/destino"/>
 
             <EditText
                 android:id="@+id/editDestino"
@@ -55,58 +53,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="130dp"
-                    android:text="@string/negocios"/>
+                    android:text="@string/negocios" />
 
             </RadioGroup>
 
             <TableRow>
-
                 <TextView
                     android:layout_gravity="center"
                     android:text="@string/dataChegada"/>
-
                 <TextView
                     android:layout_gravity="center"
                     android:text="@string/dataSaida"/>
-
             </TableRow>
 
             <TableRow>
-
                 <Button
-                    android:id="@+id/btnDataChegada"
-                    android:text="@string/selecione" />
-
+                    android:id="@+id/dataChegada"
+                    android:text="@string/selecione"/>
                 <Button
-                    android:id="@+id/btnDataSaida"
-                    android:text="@string/selecione" />
-
+                    android:id="@+id/dataSaida"
+                    android:text="@string/selecione"/>
             </TableRow>
 
             <TextView android:text="@string/orcamento"/>
-
             <EditText
                 android:id="@+id/orcamento"
                 android:inputType="numberDecimal"/>
 
-
             <TableRow>
-
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:text="@string/quantidadedePessoas"/>
+                android:layout_width="wrap_content"
+                    android:text="@string/quantidadePessoas"/>
 
                 <EditText
-                    android:id="@+id/quantidadedePessoas"
+                    android:id="@+id/quantidadePessoas"
                     android:inputType="number"/>
 
             </TableRow>
 
-            <Button android:text="@string/salvar"/>
+            <Button android:text="@string/salvar" />
 
         </TableLayout>
 
     </LinearLayout>
-
 
 </ScrollView>

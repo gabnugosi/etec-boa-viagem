@@ -1,13 +1,12 @@
 package br.com.etechoracio.exe_login;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import br.com.etechoracio.boaviagem.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,7 +31,12 @@ public class LoginActivity extends AppCompatActivity {
 
         if(user.equals("admin") && pass.equals("admin")){
             obj.show();
+            onSelecionarMenu(v);
         }
 
+    }
+    public void onSelecionarMenu(View view){
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 }

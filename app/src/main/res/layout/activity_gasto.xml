@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.etechoracio.boaviagem.GastoActivity">
+    tools:context=".GastoActivity"
+    android:id="@+id/activity_gasto">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/azul"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/azul">
 
             <TextView
                 style="@style/titulo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/novoGasto"/>
 
         </LinearLayout>
@@ -29,46 +28,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stretchColumns="0,1">
+                <TextView
+                    android:id="@+id/viewTipoGasto"
+                    android:text="@string/tipo_de_gasto" />
 
-            <TextView android:text="@string/tipodeGasto"/>
-
-            <Spinner
-                android:id="@+id/spnTipoGasto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TableRow>
-
-                <TextView android:text="@string/valor"/>
-
-                <TextView android:text="@string/data"/>
-
-            </TableRow>
+                <Spinner
+                    android:id="@+id/spnTipoGasto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/tipo_de_gasto"/>
 
             <TableRow>
-
-                <EditText android:id="@+id/valor"/>
-
-                <Button
-                    android:id="@+id/data"
+                <TextView
+                    android:layout_gravity="left"
+                    android:text="@string/valor" />
+                <TextView
+                    android:layout_gravity="left"
                     android:text="@string/data"/>
+            </TableRow>
+            <TableRow>
+
+
+
+            <EditText
+                android:id="@+id/edtvalor"/>
+
+                <Button android:id="@+id/btndata"/>
 
             </TableRow>
 
-            <TextView android:text="@string/descricao"/>
-
+            <TextView
+                android:layout_gravity="left"
+                android:text="@string/descricao" />
             <EditText
-                android:id="@+id/descricao"/>
+                android:id="@+id/edtdescricao"
+                android:inputType="text"/>
 
-            <TextView android:text="@string/local"/>
-
+            <TextView
+                android:layout_gravity="left"
+                android:text="@string/local"  />
             <EditText
-                android:id="@+id/local"/>
+                android:id="@+id/edtlocal"
+                android:inputType="text"/>
 
-            <Button android:text="@string/salvar"/>
+            <Button android:text="@string/salvar" />
 
         </TableLayout>
 
     </LinearLayout>
+
 
 </ScrollView>
